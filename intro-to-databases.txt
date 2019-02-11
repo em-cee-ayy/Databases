@@ -4,7 +4,7 @@
 42 : Integer
 09/02/1945 : Date
 98.7 : Float
-$15.99 : Float
+$15.99 : Float/Integer
 
 2. Explain when a database would be used. Explain when a text file would be used.
 
