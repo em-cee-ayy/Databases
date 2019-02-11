@@ -1,0 +1,67 @@
+1. What data types do each of these values represent?
+
+"A Clockwork Orange" : String
+42 : Integer
+09/02/1945 : Date
+98.7 : Float
+$15.99 : Float
+
+2. Explain when a database would be used. Explain when a text file would be used.
+
+Databases are used to store large amounts of data that can be read and modified quickly. Databases are stored in binary format which is not readable by humans, so when it does need to be read by humans, a text file is used.
+
+3. Describe one difference between SQL and other programming languages.
+
+SQL is declarative rather than procedural, which allows us to be concerned with WHAT we want to find rather than how we will go about finding it.
+
+4. In your own words, explain how the pieces of a database system fit together at a high level.
+
+Databases are organized into tables that consist of columns and rows, where each row contains the data for of an entry and the columns define what the data represents.  The value in each cell can be queried.
+
+5. Explain the meaning of table, row, column, and value.
+
+Table: Structure that holds a collection of related data
+Row: Horizontal group of values within a table
+Column: Individual fields within a table
+Value: Data contained in a cell
+
+6. List three data types that can be used in a table.
+
+String, integer, and float
+
+7. Given this payments table, provide an English description of the following queries and include their results:
+
+a. Select the date and the amount from the payments database table
+  2016-05-01   1500.00,
+  2016-05-10   37.00,
+  2016-05-15    124.93,
+  2016-05-23   54.72
+
+b. Select the amount greater than $500 from the payments database table
+  1500.00
+
+c. select all of the columns from payments database table where the payee is 'Mega Foods'
+  ('2016-05-15', 'Mega Foods',   124.93,  'Groceries')
+
+8. Given this users table, write SQL queries using the following criteria and include the output:
+
+a. SELECT email, signup
+	 FROM users
+	 WHERE name = 'DeAndre Data';
+
+   email                    signup
+   datad@comcast.net     2008-01-20T00:00:00.000Z
+
+b. SELECT userid
+	 FROM users
+	 WHERE email = 'aleesia.algorithm@uw.edu';
+
+   userid
+     1
+
+c. SELECT *
+	 FROM users
+	 WHERE userid = 4;
+
+userid      name              email                   signup
+  4     Brandy Boolean  bboolean@nasa.gov   1999-10-15T00:00:00.000Z
