@@ -1,0 +1,92 @@
+1.
+Adding: INSERT INTO <tablename> VALUES <your new values>
+Updating: UPDATE <tablename> SET <values to be updated> WHERE <selector>
+Deleting: DELETE FROM <tablename> WHERE <selector>
+
+2. A person must clarify the table name, have the data that they want to add or update, and then have some sort of selector (WHERE id > 123 or WHERE id > 123 and price < 100). For deleting data, you only need the table name and selector.
+
+3.
+Boolean: Whether a person has registered their email or not
+Integer: Regular number with no decimal or a userID
+Money: The cost of an item
+Date: A calendar date to keep track of their birthday to send discounts
+
+
+4.
+a. First/Last: Text/Character
+   RSVP: Boolean
+   Guests: Numeric
+   Meals: Numeric
+b. CREATE TABLE dinner (
+    name text,
+    rsvp boolean,
+    guests integer,
+    meals integer
+);
+c. ALTER TABLE wedding ADD COLUMN thankyou boolean SET DEFAULT False;
+d. ALTER TABLE wedding DROP COLUMN meals;
+e. ALTER TABLE wedding ADD COLUMN tablenumber numeric SET DEFAULT 0;
+f. DROP TABLE wedding;
+
+5.
+ CREATE TABLE library (
+    ISBN numeric(2),
+    title text,
+    author text,
+    genre text,
+    publishingdate date,
+    copies number,
+    copiesavailable number
+   );
+a.
+   INSERT INTO library VALUES (0143039432, 'Harry Potter', 'JK Rowling', 'Fiction', 01/11/1999, 10, 5);
+   INSERT INTO library VALUES (0689816990, 'Blonde Ambition', 'Zoey Dean', 'Fiction', 09/15/2005, 5, 4);
+   INSERT INTO library VALUES (0756404846, 'Hunger Games', 'Suzzane Collins', 'Fiction', 04/01/2007, 100, 1);
+
+b. UPDATE library SET copiesavailable=0 WHERE ISBN=0756404846;
+
+c. DELETE FROM library WHERE ISBN=0756404846 AND author='Suzzane Collins';
+
+6.
+CREATE TABLE space (
+ id numeric(4),
+ name text,
+ yearlaunched numeric(0),
+ country text,
+ description text,
+ operational boolean,
+ milesaway number(0)
+);
+a.
+INSERT INTO space VALUES (1234, 'Craft1', 2011, 'USA', 'Build a treehouse on Mars', True, 120000);
+INSERT INTO space VALUES (2468, 'Craft2', 2012, 'USA', 'Search for aliens', False, 300000);
+INSERT INTO space VALUES (3691, 'Craft3', 2017, 'USA', 'Play ball on the moon', True, 20300);
+
+b. DELETE FROM space WHERE id=2468 AND name='Craft2';
+
+c. UPDATE space SET operational=False WHERE id=3691;
+
+7.
+  CREATE TABLE inbox (
+    id integar,
+    subject text,
+    sender text,
+    recipients text,
+    body text,
+    timestamp timestamp,
+    read boolean,
+    emailChainId integar
+  );
+
+a.
+    INSERT INTO inbox (id, subject, sender, recipients, body, timestamp, read, emailChainId)
+    VALUES
+    (1, 'Hey', 'mary@bloc.com', 'dac@bloc.com', 'Hey, what's up!', TIMESTAMP '2019-02-11 05:01:00', TRUE, 11),
+    (2, 'Sup', 'bob@bloc.com', 'shirly@bloc.com', 'Where's the party?', TIMESTAMP '2019-02-17 03:05:00', TRUE, 12),
+    (3, 'Hola', 'lily@bloc.com', 'tom@bloc.com', 'I'm going to sleep', TIMESTAMP '2019-02-18 11:00:00', FALSE, 13);
+
+b.
+    DELETE FROM inbox WHERE id=2;
+
+c.
+    UPDATE inbox SET read=FALSE WHERE id=1;
