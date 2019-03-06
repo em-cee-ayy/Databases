@@ -1,0 +1,68 @@
+1. SELECT name
+   FROM students
+   WHERE age > 18;
+
+2. SELECT, FROM, WHERE (SFW)
+   'Seven Funky Whales'
+
+3.
+  a. SELECT name, gender, age
+     FROM dogs
+     WHERE breed LIKE '%Labrador%';
+
+  b. SELECT  id
+     FROM dogs
+     WHERE age < 1;
+
+  c. SELECT name, age
+     FROM dogs
+     WHERE gender = 'F'
+     AND weight > 35;
+
+  d. SELECT *
+     FROM dogs
+     WHERE breed NOT LIKE '%Shepard%';
+
+  e. SELECT id, age, weight, breed
+     FROM dogs
+     WHERE weight > 60
+     OR breed LIKE '%Great Dane%';
+
+
+4.
+  a. All of the names and adoption dates of the cats
+  b. All of the names and ages of the cats
+
+5.
+  a. SELECT *
+     FROM cats
+
+  b. SELECT name, gender
+     FROM cats
+     WHERE age = 7;
+
+  c. SELECT name
+     FROM cats
+     WHERE name NOT LIKE *;
+
+6.
+  > | greater than: Compares two values and returns the larger, like if you were trying to find all of the cats over a certain age.
+  < | less than: Compares two values and find the lesser, like if you were trying to find all of the kittens under a certain weight.
+  = | equal: Checks if two values are equivalent, like finding the exact name and title of a book.
+  <= | less than or equal to: Compares two values equal to OR below a certain point, like finding all of the books publishing dates up to a certain year.
+  >= | greater than or equal to: Compares two values equal to OR above a certain point, like finding all cats that are a certain age or older.
+  != | not equal to: Checks that one value does not equal the other, like finding all cats whose names aren't 'Fluffy'
+  <> | equivalent to '!=' above
+  LIKE | checks if a string matches a pattern, like finding all cats with breeds that include 'Domestic'
+  BETWEEN | checks if a value is between one AND another (same as >= __ AND <= __), like if a birds weight is BETWEEN 2 to 5 lbs.
+  IS DISTINCT FROM | checks if one value is different than the other (same as <>), like if a cats intake_date is different from in_foster where you would need to check for null.
+  IS TRUE / IS FALSE | checks if an expression is true or false, returning boolean - like if all included cats' are female.
+  IS NULL | checks if the cell is null, like checking if in_foster cell is null
+  AND | checks if both of the expressions included are true, like if a cat is female AND age is under a certain weight.
+  OR | checks if one of the included expressions is true, like if a cats gender is female OR over a certain age.
+  NOT | checks if expression is false to be returned, like if a cats breed is NOT 'Maine Coon'.
+  
+7.
+  a. 'Seashell', 'Nala'
+  b. 'Mushi', 'Seashell', 'Victoire', 'Nala'
+  c. 3, 4
